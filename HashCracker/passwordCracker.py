@@ -5,7 +5,8 @@ import hashlib
 import threading
 
 
-
+"""A Class That is used to create new threads that has the
+parameters needed for the hash checker function"""
 class threadMaker(threading.Thread):
     def __init__(self, threadID, name, startValue, endValue, stepValue, chars):
         threading.Thread.__init__(self)
@@ -21,7 +22,8 @@ class threadMaker(threading.Thread):
         hashChecker(self.name, termHash, self.startValue, self.endValue, self.step, self.chars)
 
 
-
+"""A function that iterates through all possible combinations of characters 
+and checks them against a given hash"""
 def hashChecker(threadnum, hashedPassoword ,start, end, step, seq):
     one = time.time()
     for counter in range (start, end, step):
@@ -36,7 +38,8 @@ def hashChecker(threadnum, hashedPassoword ,start, end, step, seq):
                 print("The Password Has Been Found In " + str(two - one) + " Seconds Trust Me")
                 print("Press CTRL-C To Exit")
                 print("Or Just Do Nothing If You Want To Keep Threads Open I Guess ¯\_(ᐛ)_/¯")
-
+                
+                
 if __name__ == "__main__":
     termHash = sys.argv[1]
     chars = ""
