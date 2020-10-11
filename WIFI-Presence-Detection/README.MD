@@ -1,4 +1,4 @@
-#My contrabution to the WIFI-Presence-Detection Group project
+# My contrabution to the WIFI-Presence-Detection Group project
 
 This the the code that I wrote for my final group project in first year.
 
